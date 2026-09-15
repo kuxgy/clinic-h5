@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>新根源中西医结合诊所 · 门诊科室介绍</title>
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<style>
+/* ===== 设计 Token ===== */
+:root {
+  --ink-green: #1B4332;
+  --ink-green-light: #2D6A4F;
+  --gold: #D4A574;
+  --gold-light: #E8C9A0;
+  --cinnabar: #9B2335;
+  --cinnabar-light: #C44555;
+  --paper: #FAF7F2;
+  --paper-dark: #F0EBE1;
+  --text-primary: #2D2D2D;
+  --text-secondary: #5A5A5A;
+  --text-muted: #8A8A8A;
+  --border: #E0D8C8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: var(--paper);
+  color: var(--text-primary);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* ===== 顶部导航 ===== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(250, 247, 242, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink-green);
+  letter-spacing: 1px;
+}
+
+.nav-brand span {
+  color: var(--gold);
+  font-weight: 400;
+  font-size: 11px;
+  margin-left: 6px;
+  letter-spacing: 2px;
+}
+
+.nav-menu-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-menu-btn span {
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  background: var(--ink-green);
+  transition: all 0.3s;
+}
+
+/* ===== Hero 区 ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 24px 60px;
+  background: linear-gradient(180deg, var(--ink-green) 0%, var(--ink-green-light) 100%);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(212, 165, 116, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(155, 35, 53, 0.1) 0%, transparent 50%);
+}
+
+.hero-pattern {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  opacity: 0.06;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,0.5) 40px, rgba(255,255,255,0.5) 41px),
+    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,0.5) 40px, rgba(255,255,255,0.5) 41px);
+}
+
+.hero-seal {
+  width: 72px;
+  height: 72px;
+  border: 2px solid var(--gold);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 1;
+  animation: sealFadeIn 1.2s ease-out;
+}
+
+.hero-seal svg { width: 40px; height: 40px; }
+
+@keyframes sealFadeIn {
+  from { opacity: 0; transform: translateY(-20px) scale(0.9); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.hero-title {
+  font-size: 32px;
+  color: #fff;
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+  animation: titleFadeIn 1s ease-out 0.3s both;
+}
+
+.hero-subtitle {
+  font-size: 14px;
+  color: var(--gold-light);
+  letter-spacing: 6px;
+  margin-bottom: 40px;
+  font-weight: 300;
+  position: relative;
+  z-index: 1;
+  animation: titleFadeIn 1s ease-out 0.5s both;
+}
+
+@keyframes titleFadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto 32px;
+  position: relative;
+  z-index: 1;
+  animation: dividerGrow 1s ease-out 0.7s both;
+}
+
+@keyframes dividerGrow {
+  from { width: 0; opacity: 0; }
+  to { width: 60px; opacity: 1; }
+}
+
+.hero-slogan {
+  font-size: 15px;
+  color: rgba(255,255,255,0.85);
+  line-height: 2;
+  max-width: 320px;
+  position: relative;
+  z-index: 1;
+  animation: titleFadeIn 1s ease-out 0.9s both;
+}
+
+.hero-slogan strong {
+  color: var(--gold-light);
+  font-weight: 500;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+.hero-scroll svg { width: 24px; height: 24px; opacity: 0.6; }
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+/* ===== 通用区块 ===== */
+.section {
+  padding: 60px 24px;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-label {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.section-title {
+  font-size: 24px;
+  color: var(--ink-green);
+  margin-bottom: 12px;
+}
+
+.section-line {
+  width: 40px;
+  height: 2px;
+  background: var(--gold);
+  margin: 0 auto;
+}
+
+/* ===== 诊所简介 ===== */
+.intro {
+  background: var(--paper);
+}
+
+.intro-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px 24px;
+  box-shadow: 0 4px 24px rgba(27, 67, 50, 0.06);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--gold), var(--cinnabar));
+}
+
+.intro-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 2;
+  margin-bottom: 16px;
+  text-align: justify;
+}
+
+.intro-text:last-child { margin-bottom: 0; }
+
+.intro-text strong {
+  color: var(--ink-green);
+  font-weight: 600;
+}
+
+.intro-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.intro-tag {
+  font-size: 12px;
+  padding: 5px 14px;
+  background: var(--paper-dark);
+  color: var(--ink-green);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+}
+
+/* ===== 科室导航卡片 ===== */
+.dept-nav {
+  background: var(--paper-dark);
+}
+
+.dept-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.dept-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.dept-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(27, 67, 50, 0.12);
+  border-color: var(--gold);
+}
+
+.dept-card-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 14px;
+  background: linear-gradient(135deg, var(--ink-green), var(--ink-green-light));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dept-card-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--gold-light);
+  fill: none;
+  stroke-width: 1.5;
+}
+
+.dept-card-num {
+  font-size: 10px;
+  color: var(--gold);
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+  font-family: 'Noto Serif SC', serif;
+}
+
+.dept-card-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink-green);
+  margin-bottom: 6px;
+  font-family: 'Noto Serif SC', serif;
+}
+
+.dept-card-desc {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ===== 科室详情 ===== */
+.dept-detail {
+  background: var(--paper);
+}
+
+.dept-item {
+  margin-bottom: 48px;
+  scroll-margin-top: 80px;
+}
+
+.dept-item:last-child { margin-bottom: 0; }
+
+.dept-item-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.dept-item-num {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: var(--ink-green);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Noto Serif SC', serif;
+  font-size: 18px;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.dept-item-title {
+  font-size: 20px;
+  color: var(--ink-green);
+  margin-bottom: 4px;
+}
+
+.dept-item-subtitle {
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.dept-item-intro {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 2;
+  margin-bottom: 20px;
+  padding-left: 60px;
+  text-align: justify;
+}
+
+.dept-item-services {
+  padding-left: 60px;
+}
+
+.dept-services-title {
+  font-size: 13px;
+  color: var(--cinnabar);
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dept-services-title::before {
+  content: '';
+  width: 3px;
+  height: 14px;
+  background: var(--cinnabar);
+  border-radius: 2px;
+}
+
+.dept-service-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 12px;
+}
+
+.dept-service-list li {
+  font-size: 13px;
+  color: var(--text-secondary);
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.dept-service-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+.dept-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  margin: 48px 0;
+}
+
+/* ===== 特色技术 ===== */
+.features {
+  background: var(--ink-green);
+  color: #fff;
+}
+
+.features .section-title { color: #fff; }
+.features .section-label { color: var(--gold-light); }
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feature-item {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(212, 165, 116, 0.2);
+  border-radius: 12px;
+  padding: 24px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-item::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, rgba(212,165,116,0.1) 0%, transparent 70%);
+}
+
+.feature-num {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 36px;
+  color: var(--gold);
+  opacity: 0.3;
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-weight: 900;
+}
+
+.feature-name {
+  font-size: 17px;
+  color: var(--gold-light);
+  margin-bottom: 10px;
+  font-family: 'Noto Serif SC', serif;
+  position: relative;
+  z-index: 1;
+}
+
+.feature-desc {
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.9;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== 规划展望 ===== */
+.plan {
+  background: var(--paper);
+}
+
+.plan-timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.plan-timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--gold), var(--ink-green-light));
+}
+
+.plan-node {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.plan-node:last-child { margin-bottom: 0; }
+
+.plan-node::before {
+  content: '';
+  position: absolute;
+  left: -27px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: var(--paper);
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+}
+
+.plan-node-title {
+  font-size: 15px;
+  color: var(--ink-green);
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-family: 'Noto Serif SC', serif;
+}
+
+.plan-node-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.plan-node-item {
+  font-size: 12px;
+  padding: 4px 10px;
+  background: var(--paper-dark);
+  color: var(--text-secondary);
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+/* ===== 页脚 ===== */
+.footer {
+  background: var(--ink-green);
+  color: rgba(255,255,255,0.7);
+  padding: 48px 24px 32px;
+  text-align: center;
+}
+
+.footer-logo {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+}
+
+.footer-slogan {
+  font-size: 12px;
+  color: var(--gold-light);
+  letter-spacing: 3px;
+  margin-bottom: 24px;
+}
+
+.footer-info {
+  font-size: 12px;
+  line-height: 2.2;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 24px;
+}
+
+.footer-info p { margin-bottom: 4px; }
+
+.footer-divider {
+  width: 40px;
+  height: 1px;
+  background: rgba(212,165,116,0.4);
+  margin: 0 auto 20px;
+}
+
+.footer-copy {
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 1px;
+}
+
+/* ===== 滚动揭示动画 ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== 响应式 ===== */
+@media (min-width: 768px) {
+  .hero-title { font-size: 42px; }
+  .hero-subtitle { font-size: 16px; }
+  .section { padding: 80px 40px; }
+  .section-title { font-size: 28px; }
+  .dept-grid { grid-template-columns: repeat(3, 1fr); max-width: 720px; margin: 0 auto; }
+  .dept-service-list { grid-template-columns: repeat(3, 1fr); }
+  .intro-card, .dept-item, .feature-list, .plan-timeline { max-width: 680px; margin-left: auto; margin-right: auto; }
+  .feature-list { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+}
+
+@media (min-width: 1024px) {
+  .dept-grid { grid-template-columns: repeat(6, 1fr); max-width: 960px; }
+  .dept-card { padding: 28px 12px; }
+  .dept-card-name { font-size: 14px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== 顶部导航 ===== -->
+<nav class="nav">
+  <div class="nav-brand">新根源<span>XIN GEN YUAN</span></div>
+  <button class="nav-menu-btn" onclick="document.getElementById('dept-nav-section').scrollIntoView({behavior:'smooth'})">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ===== Hero 区 ===== -->
+<section class="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-seal">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#D4A574" stroke-width="1.5">
+      <path d="M12 2C8 2 5 5 5 9c0 3 2 5 4 6v5h6v-5c2-1 4-3 4-6 0-4-3-7-7-7z"/>
+      <path d="M9 22h6"/>
+      <path d="M12 6v6"/>
+      <path d="M9 9h6"/>
+    </svg>
+  </div>
+  <h1 class="hero-title">新根源中西医结合诊所</h1>
+  <p class="hero-subtitle">门诊科室介绍</p>
+  <div class="hero-divider"></div>
+  <p class="hero-slogan">
+    中医西医相结合 · 诊疗康复相结合<br>
+    继承创新相结合 · 科学人文相结合<br>
+    <strong>把医疗生活化，把生活康养化</strong>
+  </p>
+  <div class="hero-scroll">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#D4A574" stroke-width="1.5">
+      <path d="M12 5v14M5 12l7 7 7-7"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== 诊所简介 ===== -->
+<section class="section intro">
+  <div class="section-header reveal">
+    <div class="section-label">ABOUT US</div>
+    <h2 class="section-title">诊所概况</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="intro-card reveal">
+    <p class="intro-text">
+      昆明新根源五华中西医结合诊所（又称<strong>新根源医学与健康研究部</strong>），位于昆明市五华区丰宁街道虹山南路，建筑面积224.8平方米，地处居民区集中区，紧邻昆明医科大学第二附属医院，交通便利。
+    </p>
+    <p class="intro-text">
+      诊所以"<strong>中西医融合、便捷惠民、精准诊疗</strong>"为理念，聚焦周边居民常见病诊治、慢性病管理及中医理疗需求，配备中西医执业医师、西医师、护士等专业人员，设置诊疗室、理疗室及候诊区等功能区域。
+    </p>
+    <p class="intro-text">
+      致力于做云南最好的<strong>高科技特色热疗和补充医学专科</strong>，将传统中医药智慧与现代医疗技术相结合，为患者提供优质、便捷的医疗健康服务。
+    </p>
+    <div class="intro-tags">
+      <span class="intro-tag">中西医结合</span>
+      <span class="intro-tag">特色热疗</span>
+      <span class="intro-tag">肿瘤康复</span>
+      <span class="intro-tag">慢性病管理</span>
+      <span class="intro-tag">中医理疗</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 科室导航 ===== -->
+<section class="section dept-nav" id="dept-nav-section">
+  <div class="section-header reveal">
+    <div class="section-label">DEPARTMENTS</div>
+    <h2 class="section-title">门诊科室</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="dept-grid">
+    <a href="#dept-1" class="dept-card reveal">
+      <div class="dept-card-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 015 5v3a5 5 0 01-10 0V7a5 5 0 015-5z"/><path d="M5 21v-1a7 7 0 0114 0v1"/></svg>
+      </div>
+      <div class="dept-card-num">壹</div>
+      <div class="dept-card-name">中西医专家门诊</div>
+      <div class="dept-card-desc">普通内科与肿瘤专家预约坐诊</div>
+    </a>
+    <a href="#dept-2" class="dept-card reveal">
+      <div class="dept-card-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
+      </div>
+      <div class="dept-card-num">贰</div>
+      <div class="dept-card-name">肿瘤综合治疗门诊</div>
+      <div class="dept-card-desc">整合医学理念下的肿瘤全程管理</div>
+    </a>
+    <a href="#dept-3" class="dept-card reveal">
+      <div class="dept-card-icon">
+        <svg viewBox="0 0 24 24"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg>
+      </div>
+      <div class="dept-card-num">叁</div>
+      <div class="dept-card-name">中西医结合内科</div>
+      <div class="dept-card-desc">慢性病与常见病的中西医结合诊治</div>
+    </a>
+    <a href="#dept-4" class="dept-card reveal">
+      <div class="dept-card-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2L4 7v6c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V7l-8-5z"/><path d="M9 12l2 2 4-4"/></svg>
+      </div>
+      <div class="dept-card-num">肆</div>
+      <div class="dept-card-name">中医特色诊疗门诊</div>
+      <div class="dept-card-desc">家传经验方与自研协定处方</div>
+    </a>
+    <a href="#dept-5" class="dept-card reveal">
+      <div class="dept-card-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <div class="dept-card-num">伍</div>
+      <div class="dept-card-name">热疗与康复理疗</div>
+      <div class="dept-card-desc">全身热疗、局部理疗与吸氢疗法</div>
+    </a>
+    <a href="#dept-6" class="dept-card reveal">
+      <div class="dept-card-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/><path d="M8 12h.01M16 12h.01"/></svg>
+      </div>
+      <div class="dept-card-num">陆</div>
+      <div class="dept-card-name">特需咨询门诊</div>
+      <div class="dept-card-desc">前沿医疗技术咨询与就医指导</div>
+    </a>
+  </div>
+</section>
+
+<!-- ===== 科室详情 ===== -->
+<section class="section dept-detail">
+  <div class="section-header reveal">
+    <div class="section-label">DETAILS</div>
+    <h2 class="section-title">科室详情</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <!-- 科室一 -->
+  <div class="dept-item reveal" id="dept-1">
+    <div class="dept-item-header">
+      <div class="dept-item-num">壹</div>
+      <div>
+        <h3 class="dept-item-title">中西医专家门诊</h3>
+        <div class="dept-item-subtitle">EXPERT OUTPATIENT</div>
+      </div>
+    </div>
+    <p class="dept-item-intro">
+      中西医专家门诊是诊所的核心接诊窗口，由普通中西医内科坐诊和著名肿瘤专家预约坐诊两部分组成，为患者提供规范化、个性化的中西医结合诊疗服务。每次坐诊时间不少于20分钟，确保充分沟通与精准诊断。
+    </p>
+    <div class="dept-item-services">
+      <div class="dept-services-title">诊疗范围</div>
+      <ul class="dept-service-list">
+        <li>常见病、慢性病诊治</li>
+        <li>亚健康人群调理</li>
+        <li>恶性肿瘤诊疗</li>
+        <li>疑难杂重症会诊</li>
+        <li>中西医结合处方</li>
+        <li>健康咨询与指导</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="dept-divider"></div>
+
+  <!-- 科室二 -->
+  <div class="dept-item reveal" id="dept-2">
+    <div class="dept-item-header">
+      <div class="dept-item-num">贰</div>
+      <div>
+        <h3 class="dept-item-title">肿瘤综合治疗门诊</h3>
+        <div class="dept-item-subtitle">ONCOLOGY INTEGRATED CARE</div>
+      </div>
+    </div>
+    <p class="dept-item-intro">
+      肿瘤综合治疗门诊是诊所的重点特色门诊，以"整合医学"理念为指导，将标准化抗肿瘤治疗与创新性特色疗法有机结合，为肿瘤患者提供全程管理和综合康复服务。诊所承诺：全国各地无法诊治的疑难杂重症患者，免诊费。
+    </p>
+    <div class="dept-item-services">
+      <div class="dept-services-title">主要诊疗项目</div>
+      <ul class="dept-service-list">
+        <li>恶性肿瘤内科化疗</li>
+        <li>小剂量节拍化疗</li>
+        <li>恶性肿瘤全身热疗</li>
+        <li>MArC组合静脉输注</li>
+        <li>脑肿瘤颈动脉灌注</li>
+        <li>中药肠内持续滴注</li>
+        <li>卡介苗免疫调节注射</li>
+        <li>肿瘤放射治疗咨询</li>
+        <li>肝转移癌联合治疗咨询</li>
+        <li>肿瘤全程生活方式指导</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="dept-divider"></div>
+
+  <!-- 科室三 -->
+  <div class="dept-item reveal" id="dept-3">
+    <div class="dept-item-header">
+      <div class="dept-item-num">叁</div>
+      <div>
+        <h3 class="dept-item-title">中西医结合内科门诊</h3>
+        <div class="dept-item-subtitle">INTEGRATED INTERNAL MEDICINE</div>
+      </div>
+    </div>
+    <p class="dept-item-intro">
+      中西医结合内科门诊聚焦慢性病和常见病的中西医结合诊治，突出"辨病与辨证相结合"的诊疗特色。部分核心治疗项目实行"无效退款"承诺，以疗效和诚信赢得患者信任。
+    </p>
+    <div class="dept-item-services">
+      <div class="dept-services-title">主要诊疗项目</div>
+      <ul class="dept-service-list">
+        <li>痛风降尿酸</li>
+        <li>降血脂减肥</li>
+        <li>流感及呼吸道感染</li>
+        <li>脑卒中康复</li>
+        <li>MArC抗氧化抗衰老</li>
+        <li>过敏性鼻炎</li>
+        <li>糖尿病管理</li>
+        <li>脂肪肝调理</li>
+        <li>骨质疏松</li>
+        <li>失眠与便秘</li>
+        <li>慢性疼痛管理</li>
+        <li>免疫力提升</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="dept-divider"></div>
+
+  <!-- 科室四 -->
+  <div class="dept-item reveal" id="dept-4">
+    <div class="dept-item-header">
+      <div class="dept-item-num">肆</div>
+      <div>
+        <h3 class="dept-item-title">中医特色诊疗门诊</h3>
+        <div class="dept-item-subtitle">TRADITIONAL CHINESE MEDICINE</div>
+      </div>
+    </div>
+    <p class="dept-item-intro">
+      中医特色诊疗门诊依托家传经验方和自研协定处方，开展中医药专病治疗和个性化定制服务，将传统中医药智慧与现代临床需求相结合。所有协定处方和定制产品均实行"辨证论治与辨病论治相结合，预约定制"。
+    </p>
+    <div class="dept-item-services">
+      <div class="dept-services-title">主要诊疗项目</div>
+      <ul class="dept-service-list">
+        <li>中药灌注治疗肠息肉</li>
+        <li>家传保胎方</li>
+        <li>家传不孕方</li>
+        <li>胎位不正调理</li>
+        <li>肺结节贴敷治疗</li>
+        <li>乳腺结节贴敷治疗</li>
+        <li>甲状腺结节调理</li>
+        <li>流感抗病毒系列方</li>
+        <li>儿童百日咳调理</li>
+        <li>个性化协定处方定制</li>
+        <li>宁心安神调理</li>
+        <li>子宫肌瘤辅助治疗</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="dept-divider"></div>
+
+  <!-- 科室五 -->
+  <div class="dept-item reveal" id="dept-5">
+    <div class="dept-item-header">
+      <div class="dept-item-num">伍</div>
+      <div>
+        <h3 class="dept-item-title">热疗与康复理疗门诊</h3>
+        <div class="dept-item-subtitle">THERMAL THERAPY & REHABILITATION</div>
+      </div>
+    </div>
+    <p class="dept-item-intro">
+      热疗与康复理疗门诊是诊所的特色技术门诊，引进云南省少有的全身热疗仓设备，开展全身热疗、局部热理疗及吸氢等物理治疗。热疗被称为"身体每一个细胞的清洁工，体内脉管系统的清道夫"，适用于肿瘤、慢性病及亚健康人群的康复调理。
+    </p>
+    <div class="dept-item-services">
+      <div class="dept-services-title">主要诊疗项目</div>
+      <ul class="dept-service-list">
+        <li>肿瘤全身热疗</li>
+        <li>慢性病全身热理疗</li>
+        <li>双腿局部热疗</li>
+        <li>臀部局部热疗</li>
+        <li>脊柱局部热疗</li>
+        <li>氢气吸入疗法</li>
+        <li>结直肠氢气输注</li>
+        <li>化疗后手/足综合征</li>
+        <li>肺结节综合管理</li>
+        <li>睡眠管理</li>
+        <li>脑卒中康复理疗</li>
+        <li>疼痛康复</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="dept-divider"></div>
+
+  <!-- 科室六 -->
+  <div class="dept-item reveal" id="dept-6">
+    <div class="dept-item-header">
+      <div class="dept-item-num">陆</div>
+      <div>
+        <h3 class="dept-item-title">特需咨询门诊</h3>
+        <div class="dept-item-subtitle">SPECIAL CONSULTATION</div>
+      </div>
+    </div>
+    <p class="dept-item-intro">
+      特需咨询门诊面向有特殊医疗需求的患者，提供前沿医疗技术咨询和就医路径指导。诊所与三博脑科、同仁医院、兰州重离子医院、玉溪中山医院等国内国际先进医院建立战略合作关系，为患者搭建优质医疗资源对接平台。
+    </p>
+    <div class="dept-item-services">
+      <div class="dept-services-title">主要咨询项目</div>
+      <ul class="dept-service-list">
+        <li>肿瘤放射治疗咨询</li>
+        <li>肿瘤康复指导</li>
+        <li>质子重离子治疗咨询</li>
+        <li>肠道菌群治疗咨询</li>
+        <li>干细胞治疗咨询</li>
+        <li>肾性高血压放疗咨询</li>
+        <li>疑难杂重症会诊</li>
+        <li>就医路径指导</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 特色技术 ===== -->
+<section class="section features">
+  <div class="section-header reveal">
+    <div class="section-label">CORE TECHNOLOGY</div>
+    <h2 class="section-title">特色技术与核心优势</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="feature-list">
+    <div class="feature-item reveal">
+      <div class="feature-num">01</div>
+      <h3 class="feature-name">全球首创 MArC 方案</h3>
+      <p class="feature-desc">
+        大剂量维生素C联合精氨酸、硫酸镁组合（MArC）静脉输注治疗方案，具有抗氧化、抗衰老、抗肿瘤、增强体质等作用，适用于肿瘤辅助治疗、慢性病管理、肝病肝硬化辅助治疗及皮肤美白等。
+      </p>
+    </div>
+    <div class="feature-item reveal">
+      <div class="feature-num">02</div>
+      <h3 class="feature-name">特色热疗技术</h3>
+      <p class="feature-desc">
+        引进全身热疗仓设备，开展肿瘤全身热疗和慢性病全身热理疗。首创的电磁热疗及组合在肿瘤、脂肪肝、慢性病、健身康复和流感预防治疗方面国际领先。
+      </p>
+    </div>
+    <div class="feature-item reveal">
+      <div class="feature-num">03</div>
+      <h3 class="feature-name">颈动脉灌注技术</h3>
+      <p class="feature-desc">
+        开展脑肿瘤/脑转移瘤颈动脉药物灌注和脑卒中颈动脉灌注康复治疗，通过半定向灌注提高局部药物浓度，精准提升疗效，为神经系统疾病患者提供新的治疗选择。
+      </p>
+    </div>
+    <div class="feature-item reveal">
+      <div class="feature-num">04</div>
+      <h3 class="feature-name">中西医结合治癌</h3>
+      <p class="feature-desc">
+        将标准化抗肿瘤治疗与中医药、热疗、MArC等特色疗法有机整合，开展低剂量节拍化疗、中药肠内灌注等创新性治疗，遵循指南、突破指南、超越指南。
+      </p>
+    </div>
+    <div class="feature-item reveal">
+      <div class="feature-num">05</div>
+      <h3 class="feature-name">无效退款承诺</h3>
+      <p class="feature-desc">
+        痛风降尿酸、瘦身减脂等核心治疗项目实行"无效退款"承诺，以真实疗效和诚信服务赢得患者信任，体现对自身技术的充分信心。
+      </p>
+    </div>
+    <div class="feature-item reveal">
+      <div class="feature-num">06</div>
+      <h3 class="feature-name">质子重离子咨询点</h3>
+      <p class="feature-desc">
+        云南省首个恶性肿瘤质子重离子放射治疗咨询点，为患者对接国内顶尖放射治疗资源，提供专业的治疗方案评估和就医路径指导。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 规划展望 ===== -->
+<section class="section plan">
+  <div class="section-header reveal">
+    <div class="section-label">FUTURE PLAN</div>
+    <h2 class="section-title">规划中科室设置</h2>
+    <div class="section-line"></div>
+  </div>
+  <p class="intro-text reveal" style="max-width:680px;margin:0 auto 32px;text-align:center;">
+    根据诊所中长期发展规划，未来将逐步扩展为二级肿瘤及放射中西医结合研究型医院，为患者提供更全面的医疗服务。
+  </p>
+  <div class="plan-timeline reveal">
+    <div class="plan-node">
+      <div class="plan-node-title">临床科室</div>
+      <div class="plan-node-items">
+        <span class="plan-node-item">急诊科</span>
+        <span class="plan-node-item">内科</span>
+        <span class="plan-node-item">外科</span>
+        <span class="plan-node-item">肿瘤科</span>
+        <span class="plan-node-item">中医科</span>
+        <span class="plan-node-item">皮肤科</span>
+        <span class="plan-node-item">良性病科</span>
+      </div>
+    </div>
+    <div class="plan-node">
+      <div class="plan-node-title">辅助科室</div>
+      <div class="plan-node-items">
+        <span class="plan-node-item">超声科</span>
+        <span class="plan-node-item">放射诊断科</span>
+        <span class="plan-node-item">心电图室</span>
+        <span class="plan-node-item">药房</span>
+        <span class="plan-node-item">中医药制剂室</span>
+      </div>
+    </div>
+    <div class="plan-node">
+      <div class="plan-node-title">特色科室</div>
+      <div class="plan-node-items">
+        <span class="plan-node-item">理疗科（吸氢）</span>
+        <span class="plan-node-item">医学美容科</span>
+        <span class="plan-node-item">中医药茶饮吧</span>
+        <span class="plan-node-item">健康管理中心</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 页脚 ===== -->
+<footer class="footer">
+  <div class="footer-logo">新根源中西医结合诊所</div>
+  <div class="footer-slogan">一切为了人类健康</div>
+  <div class="footer-info">
+    <p>地址：云南省昆明市五华区丰宁街道虹山南路169号</p>
+    <p>诊疗时间：请提前预约</p>
+    <p>专家门诊：实行预约制</p>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-copy">
+    © 2026 新根源医学与健康研究部 · 守正创新
+  </div>
+</footer>
+
+<script>
+// 滚动揭示动画
+const revealElements = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+revealElements.forEach(el => observer.observe(el));
+
+// 平滑滚动偏移（固定导航高度）
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
